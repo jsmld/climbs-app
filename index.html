@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Climbs App</title>
+  </head>
+  <body>
+    <script src="./script.js"></script>
+    <div class="controls">
+      <button onclick="changePinColor('#00ff00')">Green Pins</button>
+      <button onclick="changePinColor('#ffff00')">Yellow Pins</button>
+      <button onclick="changePinColor('#0000ff')">Blue Pins</button>
+      <button onclick="changePinColor('#ff0000')">Red Pins</button>
+      <button onclick="changePinColor('#000000')">Black Pins</button>
+      <button class="undo-btn" onclick="undoLastPin()" id="undoButton" disabled>
+        Undo Last Pin
+      </button>
+      <button class="clear-btn" onclick="clearPins()">Clear All</button>
+      <button onclick="zoomIn(event)" id="zoomInButton">Zoom In</button>
+      <button onclick="zoomOut(event)" id="zoomOutButton">Zoom Out</button>
+    </div>
+    <div class="shortcut-hint">
+      Keyboard Shortcuts: Press 'Ctrl + Z' or 'Cmd + Z' to undo
+    </div>
+    <div id="pin-count">Total Pins: 0</div>
+    <div id="zoom-level">Zoom Level: 100%</div>
+    <div class="container">
+      <img
+        src="./bouldering-gym-floor-plan.jpg"
+        alt="Bouldering Gym Floor Plan"
+        class="gym-image"
+      />
+    </div>
+  </body>
+</html>
